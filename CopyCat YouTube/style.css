@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #181818;
+    display: grid;
+    grid-template-columns: 1fr 2fr 400px;
+    grid-auto-rows: minmax(65px, auto);
+}
+
+header{
+    
+    grid-column: 1/4;
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 140px;
+}
+
+.search-div{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 350px;
+    height: 45px;
+    background-color: #121212;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px 10px;
+}
+
+.search:placeholder{
+    color: #747474;
+    font-size: 14px;
+}
+
+.lupa{
+    width: 50px;
+    height: 45px;
+    background-color: #313131;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.lupa img{
+    width: 25px;
+}
+
+.item.mic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item.mic img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    width: 60%;
+}
+
+.item{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+}
+
+.perfil-itens{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.burguer{
+    display: none;
+}
+
+.main-content{
+
+    grid-column: 1/3;
+    grid-row: 2/10;
+    padding: 20px 0px;
+}
+
+.video{
+    width: 70%;
+    height: 400px;
+    background-color: #bbb;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video img{
+    width: 17%;
+    height: 27%;
+    cursor: pointer;
+}
+
+.title{
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-left: 15%;
+    padding: 10px 0px;
+}
+
+.interacao{
+    width: 70%;
+    height: 45px;
+    background-color: #bbb;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    flex-direction: row;
+}
+
+.chanel{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.chanel img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.voting-itens{
+    display: flex;
+    list-style: none;
+    
+    
+    padding-right: 5%;
+    padding-bottom: 5px;
+    gap: 30px;
+}
+
+.voting-button img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.linha{
+    width: 70%;
+    height: 1px;
+    background-color: #747474;
+    margin: 10px auto;
+}
+
+.comentarios{
+    width: 70%;
+    height: 80px;
+    background-color: #bbb;
+    margin: 0 auto;
+}
+
+.input-comentario{
+    background-color: #BBBBBB;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: white;
+    padding: 10px 10px;
+}
+
+.input-comentario:placeholder{
+    color: #747474;
+    font-size: 19px;
+}
+
+.side-bar{
+    grid-row: 2/10;
+}
+
+.side-video{
+    width: 90%;
+    height: 150px;
+    margin: 10px auto;
+    background-color: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.side-video img{
+    width: 18%;
+    height: 40%;
+}
+
+.side-bar a{
+    text-decoration: none;
+}
+
+.side-name{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+@media (max-width: 1130px) {
+
+    .video {
+      width: 90%;
+    }
+
+    .title {
+      margin-left: 5%;
+    }
+    .interacao {
+      width: 90%;
+    }
+
+    .linha {
+      width: 90%;
+    }
+
+    .comentarios {
+      width: 90%;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        grid-template-columns: 1fr 2fr 32%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-column: 1/4;
+        grid-row: 2 / auto;
+    }
+    .side-bar {
+        grid-column: 1/4;
+        grid-row: 3 / auto;
+    }
+    .perfil-itens {
+        display: none;
+    }
+    .burguer {
+        display: block;
+    }
+    .search-div {
+        width: 60%;
+    }
+    .search {
+        width: 69%;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 416px) {
+    .mic {
+        display: none;
+    }
+    .video {
+        width: 95%;
+        height: 200px;
+    }
+}
